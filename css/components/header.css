@@ -1,16 +1,23 @@
 .container_sidebar {
-  padding: 30px;
-  background: #0f1121;
+  /* background-color: #fff; */
+  background: #080918;
+
+  padding: 25px;
+  position: fixed;
+  z-index: 9;
+  width: 200px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: 0 0 20px -15px rgb(0 0 0 / 25%);
 }
 
 #header {
   position: relative;
   margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
 }
 
-/* logo */
+/* logo -------------- */
 #logo {
   margin-bottom: 20px;
 }
@@ -29,31 +36,205 @@
   fill-rule: nonzero;
 }
 
-/* nav */
-a,
+/* nav --------------- */
+
+/* a,
 a:focus,
 a:hover {
   color: #181927;
+} */
+
+#main_menu {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#main_menu ul li {
+  position: relative;
+  margin-bottom: 8px;
 }
 
 #main_menu ul li .nav_link {
   display: block;
-
-  font-family: "Teko", sans-serif;
-
-  /* background-color: #f7f7f7; */
-
   background-color: #0f1121;
   color: rgba(255, 255, 255, 0.7);
 
   border-radius: 6px;
   line-height: 24px;
   position: relative;
-  padding: 10px 10px 6px 40px;
+  padding: 10px 12px 6px 40px;
   font-size: 15px;
+  font-family: var(--fontTeko);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+#main_menu ul li .nav_link:hover {
+  background-color: #4dceed;
+  color: #181927;
+}
+
+#main_menu ul li .nav_link span {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  text-align: center;
+  line-height: 1;
+}
+
+#main_menu ul li .nav_link span svg {
+  fill: rgba(255, 255, 255, 0.7);
+}
+
+/* drop-down -------------- */
+#main_menu ul li.drop_down > .nav_link:after {
+  content: "\f0dd";
+  font-weight: 900;
+  font-family: "font awesome 5 free";
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-60%);
+  -webkit-transform: translateY(-60%);
+}
+
+.sub-menu {
+  padding-top: 10px;
+  /* display: none; */
+  padding-left: 15px;
+}
+
+.sub-menu li {
+  margin-bottom: 5px;
+}
+
+.sub-menu li {
+  display: block;
+  background-color: #f7f7f7;
+  line-height: 24px;
+  position: relative;
+  font-size: 15px;
+  padding: 7px 12px 3px 15px;
   text-transform: uppercase;
   font-family: var(--fontTeko);
+  border-radius: 6px;
   letter-spacing: 3px;
-  transition: 0.4s all;
-  -webkit-transition: 0.4s;
+  transition: all var(--transition);
+  -webkit-transition: var(--transition);
+}
+
+.sub-menu li a i.f_bridge {
+  content: "\eaab";
+}
+
+.sub-menu li a i {
+  margin-right: 5px;
+}
+
+/* mode ------------------ */
+
+#header #mode {
+  /* background-color: #f7f7f7; */
+  background-color: #0f1121;
+  margin-top: 20px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+#header .mode_toggle_container {
+  width: 50%;
+}
+
+#header .mode_toggle_container input {
+  display: none;
+}
+
+.mode_toggle_container input[type="checkbox"],
+.mode_toggle_container input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#header .mode_toggle_container label {
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s;
+}
+
+#header .mode_toggle_container svg {
+  height: 20px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  /* fill: rgba(255, 255, 255, 0.5); */
+}
+
+.mode_toggle_container > input:checked + label {
+  background: #4dceed;
+}
+
+.mode_toggle_container > input:checked + label svg {
+  fill: #181927;
+}
+
+/* handles ------------- */
+#handles {
+  position: relative;
+  margin-top: 20px;
+  /* z-index: 1; */
+}
+
+#handles h3 {
+  position: relative;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--fontTeko);
+  color: #fff;
+  line-height: 30px;
+  padding-left: 40px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+#handles h3::before {
+  display: block;
+  content: "";
+  width: 25px;
+  position: absolute;
+  left: 8px;
+  top: 12px;
+  height: 2px;
+  background-color: #4dceed;
+}
+
+#handles ul {
+  display: flex;
+  padding-left: 8px;
+}
+
+#handles ul li:not(:first-child) {
+  margin-left: 15px;
+}
+
+#handles ul li a {
+  line-height: 30px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+#handles ul li a:hover {
+  color: #fff;
 }

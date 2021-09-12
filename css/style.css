@@ -11,16 +11,22 @@ body {
 body {
   box-sizing: border-box;
   overflow: hidden;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
+
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--fontTitillium);
+  line-height: 1.4;
+  min-height: 100%;
 }
 
 .container {
   display: flex;
 }
 
-.container_sidebar {
+/* .container_sidebar {
   width: 30%;
-}
+} */
 
 .container_main {
   /* Take the remaining width */
@@ -33,6 +39,8 @@ body {
 svg {
   height: 20px;
   width: auto;
+  overflow: hidden;
+  vertical-align: middle;
 }
 
 ul li {
@@ -42,3 +50,15 @@ ul li {
 a {
   text-decoration: none;
 }
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--fontTitillium);
+}
+
+/* .btn-blue {
+  background-color: #4dceed;
+  color: #181927;
+} */
