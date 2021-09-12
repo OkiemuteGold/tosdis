@@ -2,13 +2,14 @@
   --day: #fad54e;
 
   --customBlue: #4dceed;
+  --customBlue: #4dceed;
   --customWhite: #f7f7f7;
   --customDark: #181927;
-  --customTextColor: #777;
+  --customTextColor: #6c757d;
 
   --dark: #0f1121;
   --white: #fff;
-  --gray: #777;
+  --gray: #ecf0f0;
   --lightGray: rgba(255, 255, 255, 0.7);
 
   --transparent: transparent;
@@ -18,3 +19,20 @@
   --fontTeko: "Teko", sans-serif;
   --fontTitillium: "Titillium Web";
 }
+
+/* .fil0 {
+  fill: #181927;
+}
+
+.fil1 {
+  fill: #1cbdcf;
+}
+
+.fil2 {
+  fill: #1cbdcf;
+}
+
+.fil3 {
+  fill: #181927;
+  fill-rule: nonzero;
+} */

@@ -2,10 +2,11 @@
   /* background-color: #fff; */
   background: #080918;
 
-  padding: 25px;
+  padding: 20px 25px;
   position: fixed;
   z-index: 9;
-  width: 200px;
+  /* width: 30%; */
+  width: 230px;
   top: 0;
   left: 0;
   height: 100%;
@@ -94,34 +95,37 @@ a:hover {
 }
 
 /* drop-down -------------- */
-#main_menu ul li.drop_down > .nav_link:after {
-  content: "\f0dd";
-  font-weight: 900;
-  font-family: "font awesome 5 free";
+#main_menu ul li.drop_down > .nav_link i {
   position: absolute;
   right: 5px;
   top: 50%;
-  transform: translateY(-60%);
-  -webkit-transform: translateY(-60%);
+  transform: translateY(-45%);
+  -webkit-transform: translateY(-45%);
 }
 
-.sub-menu {
+.sub_menu {
   padding-top: 10px;
-  /* display: none; */
+  display: none;
   padding-left: 15px;
+  transition: all var(--transition);
 }
 
-.sub-menu li {
+.display_block {
+  display: block;
+}
+
+.sub_menu li {
   margin-bottom: 5px;
 }
 
-.sub-menu li {
+.sub_menu li a {
   display: block;
   background-color: #f7f7f7;
+  color: #181927;
   line-height: 24px;
   position: relative;
   font-size: 15px;
-  padding: 7px 12px 3px 15px;
+  padding: 7px 12px 4px 40px;
   text-transform: uppercase;
   font-family: var(--fontTeko);
   border-radius: 6px;
@@ -129,13 +133,57 @@ a:hover {
   transition: all var(--transition);
   -webkit-transition: var(--transition);
 }
-
-.sub-menu li a i.f_bridge {
-  content: "\eaab";
+.sub_menu li.b_bridge_sub a {
+  background: #f3ba2f;
+}
+.sub_menu li.f_bridge_sub a {
+  background: #13b5ec;
 }
 
-.sub-menu li a i {
+.sub_menu li a:hover {
+  background-color: #6c757d;
+  color: #f7f7f7;
+  cursor: pointer;
+}
+.sub_menu li.b_bridge_sub a:hover {
+  background-color: #181927;
+  color: #f3ba2f;
+}
+.sub_menu li.f_bridge_sub a:hover {
+  background: rgb(0, 81, 255);
+}
+
+.sub_menu li a i {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.sub_menu li a i.ethereum,
+.sub_menu li a i.bnb,
+.sub_menu li a i.f_bridge {
+  font-family: cryptofont !important;
+  speak-as: never;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
   margin-right: 5px;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sub_menu li a i.ethereum::before {
+  content: "\ea88";
+}
+.sub_menu li a i.bnb::before {
+  content: "\e98e";
+}
+.sub_menu li a i.f_bridge::before {
+  content: "\eaab";
 }
 
 /* mode ------------------ */
