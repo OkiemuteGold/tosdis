@@ -1,0 +1,21 @@
+:root {
+  --day: #fad54e;
+
+  --customBlueTab: rgba(12, 117, 158, 0.55);
+  --customWhite: #f7f7f7;
+  --customTextColor: #777;
+
+  --black: #020202;
+  --customDark1: #0f1121;
+  --customDark2: #181927;
+  --white: #fff;
+  --gray: #777;
+  --lightGray: rgba(255, 255, 255, 0.7);
+
+  --transparent: transparent;
+
+  --transition: 0.4s ease;
+
+  --fontTeko: "Teko", sans-serif;
+  --fontTitillium: "Titillium Web";
+}

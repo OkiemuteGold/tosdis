@@ -1,0 +1,59 @@
+.container_sidebar {
+  padding: 30px;
+  background: #0f1121;
+}
+
+#header {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* logo */
+#logo {
+  margin-bottom: 20px;
+}
+
+#logo svg {
+  height: 30px;
+  width: auto;
+}
+
+.fil0 {
+  fill: #fff !important;
+}
+
+.fil3 {
+  fill: #fff !important;
+  fill-rule: nonzero;
+}
+
+/* nav */
+a,
+a:focus,
+a:hover {
+  color: #181927;
+}
+
+#main_menu ul li .nav_link {
+  display: block;
+
+  font-family: "Teko", sans-serif;
+
+  /* background-color: #f7f7f7; */
+
+  background-color: #0f1121;
+  color: rgba(255, 255, 255, 0.7);
+
+  border-radius: 6px;
+  line-height: 24px;
+  position: relative;
+  padding: 10px 10px 6px 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: var(--fontTeko);
+  letter-spacing: 3px;
+  transition: 0.4s all;
+  -webkit-transition: 0.4s;
+}

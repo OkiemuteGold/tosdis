@@ -1,0 +1,44 @@
+@import url(./components/header.css);
+@import url(./components/variables.css);
+@import url(./components/mode.css);
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+  /* scroll-behavior: smooth; */
+}
+
+.container {
+  display: flex;
+}
+
+.container_sidebar {
+  width: 30%;
+}
+
+.container_main {
+  /* Take the remaining width */
+  flex: 1;
+
+  /* Make it scrollable */
+  overflow: auto;
+}
+
+svg {
+  height: 20px;
+  width: auto;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
