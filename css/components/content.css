@@ -9,11 +9,11 @@
   /* flex: 1; */
 
   /* Make it scrollable */
-  /* overflow: auto; */
+  overflow: auto;
 }
 
 .content_theme {
-  opacity: 0.14;
+  opacity: 0.075;
   /* opacity: 0.6; */
 
   position: absolute;
@@ -42,9 +42,7 @@
   content: "\ea88";
 }
 
-.main_section,
-.search_section,
-.cards_section {
+.main_section {
   margin-bottom: 30px;
   position: relative;
 }
@@ -170,6 +168,11 @@ ul.network_list li input:checked + label {
 }
 
 /* search_section */
+.search_section {
+  margin-bottom: 20px;
+  position: relative;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -207,7 +210,12 @@ ul.network_list li input:checked + label {
   color: #4dceed;
 }
 
-/* pools_tab */
+/* cards_section */
+.cards_section {
+  margin-bottom: 30px;
+  position: relative;
+}
+
 .pools_tab .pools {
   position: relative;
   /* background-color: #fff; */
@@ -216,6 +224,7 @@ ul.network_list li input:checked + label {
   border-radius: 30px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .pools_tab .pools li {
@@ -343,12 +352,6 @@ ul.network_list li input:checked + label {
   text-align: right;
 }
 
-/* .pool_earning h2 {
-  color: #4dceed;
-  line-height: 1;
-  font-size: 42px;
-} */
-
 .pool_earning h4 {
   font-size: 13px;
   /* color: #8b9198; */
@@ -398,6 +401,62 @@ ul.network_list li input:checked + label {
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 8px;
+}
+
+.token_claimed {
+  position: relative;
+  height: 6px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.token-claimed span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #4dceed;
+  /* width: 95.8419%; */
+}
+
+.claim_detail h4 {
+  font-weight: 600;
+  line-height: 18px;
+  font-size: 13px;
+  color: #4dceed;
+  float: left;
+}
+
+.claim_detail h6 {
+  line-height: 18px;
+  font-size: 13px;
+  color: #8b9198;
+  float: right;
+}
+
+.claim_detail::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.view_btn {
+  margin-bottom: 10px;
+}
+
+.view_btn a {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.view_btn a:hover {
+  border-color: #4dceed;
+  color: #fff;
 }
 
 @media screen and (max-width: 1025px) {
