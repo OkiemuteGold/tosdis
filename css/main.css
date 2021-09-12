@@ -103,6 +103,10 @@ a {
   -webkit-transition: var(--transition);
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 button,
 input,
 select,

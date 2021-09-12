@@ -2,7 +2,7 @@
   color: #f7f7f7;
   position: relative;
   z-index: 9;
-  padding: 30px 30px 30px 0;
+  padding: 25px 30px 25px 0;
   margin-left: 300px;
 
   /* Take the remaining width */
@@ -241,6 +241,163 @@ ul.network_list li input:checked + label {
 .pools_tab .pools li input:checked + label,
 .pools_tab .pools li label:hover {
   background-color: #4dceed;
+}
+
+.cards {
+  margin: 15px;
+  position: relative;
+  border-radius: 12px;
+  /* background: linear-gradient(
+    135deg,
+    rgba(138, 146, 178, 0.15) 0,
+    rgba(255, 255, 255, 0.8) 100%
+  ); */
+  background: linear-gradient(
+    135deg,
+    rgba(138, 146, 178, 0.3) 0,
+    rgba(15, 17, 33, 0.7) 30%
+  );
+  box-shadow: 0 0 20px -12px #8a92b2;
+}
+
+.ribbon {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  text-align: right;
+}
+
+.ribbon span {
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #4dceed;
+  background: linear-gradient(#4dceed 0, #28c0e4 100%);
+  box-shadow: 0 3px 10px -5px #000;
+  position: absolute;
+  top: 19px;
+  left: -21px;
+}
+
+.ribbon span::before,
+.ribbon span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  z-index: -1;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #28c0e4;
+}
+
+.ribbon span::before {
+  left: 0;
+  border-left: 3px solid #28c0e4;
+  border-right: 3px solid transparent;
+}
+
+.ribbon span::after {
+  right: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #28c0e4;
+}
+
+.card_content {
+  overflow: hidden;
+  position: relative;
+  padding: 25px;
+  z-index: 1;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 15px;
+  float: left;
+}
+
+.title img {
+  max-height: 50px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.title h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-family: var(--fontTeko);
+}
+
+.pool_earning {
+  float: right;
+  text-align: right;
+}
+
+/* .pool_earning h2 {
+  color: #4dceed;
+  line-height: 1;
+  font-size: 42px;
+} */
+
+.pool_earning h4 {
+  font-size: 13px;
+  /* color: #8b9198; */
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.yield_box {
+  position: relative;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.yield_box table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.yield_box table > tr {
+  vertical-align: middle;
+}
+
+.yield_box tr td,
+.yield_box tr th {
+  padding: 3px 0;
+}
+
+.yield_box tr th {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.yield_box tr td {
+  text-align: right;
+  color: #8b9198;
+}
+
+.progress_bar {
+  margin-bottom: 20px;
+}
+
+.progress_bar h5 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 1025px) {
