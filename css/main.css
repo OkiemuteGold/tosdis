@@ -1,7 +1,14 @@
 @import url(./components/header.css);
 @import url(./components/content.css);
-@import url(./components/variables.css);
-@import url(./components/mode.css);
+
+:root {
+  --transparent: transparent;
+
+  --transition: 0.4s ease;
+
+  --fontTeko: "Teko", sans-serif;
+  --fontTitillium: "Titillium Web", sans-serif;
+}
 
 *,
 *::before,
