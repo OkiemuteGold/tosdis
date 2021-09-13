@@ -8,8 +8,8 @@
   /* Take the remaining width */
   /* flex: 1; */
 
-  /* Make it scrollable */
   overflow: auto;
+  height: 100vh;
 }
 
 .content_theme {
@@ -42,16 +42,13 @@
   content: "\ea88";
 }
 
-.main_section {
-  margin-bottom: 30px;
-  position: relative;
-}
-
 /* top_title_section */
 .main_section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .main_title {
@@ -345,6 +342,7 @@ ul.network_list li input:checked + label {
   letter-spacing: 1px;
   font-size: 20px;
   font-family: var(--fontTeko);
+  margin-bottom: 0;
 }
 
 .pool_earning {
@@ -357,8 +355,8 @@ ul.network_list li input:checked + label {
   /* color: #8b9198; */
   color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 25px;
+  right: 25px;
 }
 
 .yield_box {
@@ -463,6 +461,84 @@ ul.network_list li input:checked + label {
   .main_section {
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
+  }
+
+  .main_title {
+    order: 1;
+    margin-top: 20px;
+  }
+
+  .select_network_section {
+    width: 100%;
     justify-content: space-between;
+    order: 0;
+  }
+
+  .cards {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .card_content {
+    padding: 35px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  /* .main_content_container {
+        order: 1;
+    } */
+
+  .pools_tab {
+    margin-top: 20px;
+  }
+
+  .pools {
+    margin-bottom: 10px;
+  }
+
+  .card_content {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .select_network_section,
+  .main_title {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .connect_wallet_btn,
+  .network_change fieldset {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  .network_change fieldset {
+    margin: 20px auto;
+  }
+
+  .pools_tab .pools {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin-top: 20px;
+  }
+
+  .pools_tab .pools li {
+    width: 100%;
+    background-color: #0f1121;
+    border-radius: 30px;
+    margin-bottom: 8px;
+  }
+
+  .main_title p {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
   }
 }

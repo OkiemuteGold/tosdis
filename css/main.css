@@ -148,3 +148,17 @@ h3 {
   transition: all var(--transition);
   -webkit-transition: var(--transition);
 }
+
+@media screen and (max-width: 769px) {
+  .container_sidebar,
+  .main_content_container {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .main_content_container {
+    padding-top: 200px;
+  }
+}
